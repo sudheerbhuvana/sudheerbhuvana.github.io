@@ -3,50 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <title>Coming Soon</title>
+    
+    <!-- Fontshare Excon -->
     <style>
+        @font-face {
+            font-family: 'Excon';
+            src: url('https://cdn.fontshare.com/wf/H5TXJTCVEL3JP5T6H2HLU32MM3BNIUHF/W2E2IE7CU35E4MKG5HKJTAOLTAMXQFUU/6SKIM7MFNDCQT6WO2N4KWOESBLYOY2XU.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+            font-style: normal;
+        }
+
+        :root {
+            --bg-color: #09090b;
+            --text-color: #ffffff;
+            --icon-color: #ffffff;
+            --icon-hover: #d4d4d8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Excon', sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: var(--bg-color);
+            color: var(--text-color);
+            text-align: center;
         }
-        h1, h2, h3 {
-            color: #333;
+
+        .title {
+            font-size: 3rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            opacity: 0;
+            animation: fadeIn 1.2s ease-in-out forwards;
         }
-        p {
-            color: #666;
+
+        .social-icons {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1.5rem;
         }
-        a {
-            color: #007bff;
+
+        .social-icons a {
+            color: var(--icon-color);
+            font-size: 1.8rem;
             text-decoration: none;
+            transition: color 0.3s ease-in-out;
         }
-        a:hover {
-            text-decoration: underline;
+
+        .social-icons a:hover {
+            color: var(--icon-hover);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
+    
+    <!-- FontAwesome for Social Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My GitHub Page!</h1>
-    </header>
-    <main>
-        <h2>About Me</h2>
-        <p>Hello, I'm Sudheer. I love coding and creating websites!</p>
-        
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="https://github.com/yourusername/project1">Project 1</a></li>
-            <li><a href="https://github.com/yourusername/project2">Project 2</a></li>
-            <!-- Add more projects as needed -->
-        </ul>
-        
-        <h2>Contact Me</h2>
-        <p>You can reach me via email at <a href="mailto:youremail@example.com">youremail@example.com</a>.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 My GitHub Page. Built with ❤️ by Sudheer!</p>
-    </footer>
+
+    <div class="title">Sudheer Reddy
+       
+    </div>
+    <p>Portfolio? yeah, it's on its way... kinda (whenever I stop procrastinating).</p>
+    <div class="social-icons">
+        <a href="https://github.com/sudheerbhuvana" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://heyysudhi.in/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://instagram.com/heyysudhi" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://discord.com/users/781882376790736937" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="mailto:contact@heyysudhi.in"><i class="fas fa-envelope"></i></a>
+    </div>
+
 </body>
 </html>
