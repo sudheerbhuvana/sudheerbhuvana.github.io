@@ -7,74 +7,116 @@
     
     <!-- Fontshare Excon -->
     <style>
-        @font-face {
-            font-family: 'Excon';
-            src: url('https://cdn.fontshare.com/wf/H5TXJTCVEL3JP5T6H2HLU32MM3BNIUHF/W2E2IE7CU35E4MKG5HKJTAOLTAMXQFUU/6SKIM7MFNDCQT6WO2N4KWOESBLYOY2XU.woff2') format('woff2');
-            font-weight: 500;
-            font-display: swap;
-            font-style: normal;
-        }
+   @font-face {
+    font-family: 'Excon';
+    src: url('https://cdn.fontshare.com/wf/H5TXJTCVEL3JP5T6H2HLU32MM3BNIUHF/W2E2IE7CU35E4MKG5HKJTAOLTAMXQFUU/6SKIM7MFNDCQT6WO2N4KWOESBLYOY2XU.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
 
-        :root {
-            --bg-color: #09090b;
-            --text-color: #ffffff;
-            --icon-color: #ffffff;
-            --icon-hover: #d4d4d8;
-        }
+/* Root Variables */
+:root {
+    --bg-color: #09090b;
+    --text-color: #ffffff;
+    --icon-color: #ffffff;
+    --icon-hover: #d4d4d8;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Excon', sans-serif;
-        }
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Excon', sans-serif;
+}
 
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: var(--bg-color);
-            color: var(--text-color);
-            text-align: center;
-        }
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 0 1rem;
+}
 
-        .title {
-            font-size: 3rem;
-            font-weight: 500;
-            letter-spacing: -0.02em;
-            opacity: 0;
-            animation: fadeIn 1.2s ease-in-out forwards;
-        }
+/* Title */
+.title {
+    font-size: clamp(2rem, 5vw, 3rem); /* Responsive */
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+    max-width: 90%;
+    word-wrap: break-word;
+}
 
-        .social-icons {
-            margin-top: 1.5rem;
-            display: flex;
-            gap: 1.5rem;
-        }
+/* Subtext */
+p {
+    font-size: clamp(1rem, 3vw, 1.3rem); /* Responsive */
+    max-width: 85%;
+    margin-top: 0.8rem;
+    line-height: 1.4;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
 
-        .social-icons a {
-            color: var(--icon-color);
-            font-size: 1.8rem;
-            text-decoration: none;
-            transition: color 0.3s ease-in-out;
-        }
+/* Social Icons */
+.social-icons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 1.8s ease-in-out forwards;
+}
 
-        .social-icons a:hover {
-            color: var(--icon-hover);
-        }
+.social-icons a {
+    color: var(--icon-color);
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.social-icons a:hover {
+    color: var(--icon-hover);
+    transform: scale(1.1);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem; /* Adjusted for mobile */
+    }
+
+    p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .social-icons {
+        gap: 1rem;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem; /* Adjust icon size */
+    }
+}
+
     </style>
     
     <!-- FontAwesome for Social Icons -->
