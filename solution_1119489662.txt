@@ -1,0 +1,19 @@
+def solve():
+    
+    adithya = int(input())
+    
+    for _ in range(adithya):
+        uma = int(input())
+        
+        bat = list(map(int, input.split()))
+        
+        cricket = 0
+        allu = 0
+        
+        for arjun in bat:
+            cricket += abs(cricket)
+            allu += abs(cricket)
+            
+    print(allu)
+            
+            

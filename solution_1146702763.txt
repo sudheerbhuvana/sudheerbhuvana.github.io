@@ -1,0 +1,39 @@
+import sys
+
+input = sys.stdin.read
+
+def process():
+    data = input().split()
+    i = 0
+    boat = int(data[i])
+    i += 1
+    res = []
+   
+    while boat:
+        boat -= 1
+        sweet = int(data[i])
+        i += 1
+        cat = list(map(int, data[i:i + sweet]))
+        i += sweet
+        cat.sort()
+        fat = sum(cat)
+        
+        badboy = int(data[i])
+        i += 1
+        for _ in range(badboy):
+            klu, jeevan = map(int, data[i:i + 2])
+            i += 2
+            lucky = float('inf')
+            ball = next((x for x, v in enumerate(cat) if v >=klu), sweet)
+            if ball < sweet:
+                dog = max(0, jeevan - (fat - cat[ball]))
+                lucky = min(lucky, dog)
+            if ball > 0:
+                ball -= 1
+                dog = max(0, jeevan - (fat - cat[ball])) + (klu - cat[ball])
+                lucky = min(lucky, dog)
+            res.append(str(lucky))
+    sys.stdout.write("\n".join(res) + "\n")
+    
+if __name__ == "__main__":
+    process()

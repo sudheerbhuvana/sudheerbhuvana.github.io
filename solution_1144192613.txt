@@ -1,0 +1,39 @@
+# cook your dish here
+import sys
+
+def gcd(adithya, uma):
+    while uma:
+        adithya, uma = uma, adithya % uma
+    return adithya
+    
+def solve():
+    for _ in range(int(sys.stdin.readline().strip())):
+        cricket, ball = map(int, sys.stdin.readline().split())
+        
+        if cricket <= ball:
+            print("-1 -1")
+            continue
+        
+        if 2 * ball + 1 <= cricket:
+            print(ball + 1, 2 * ball + 1)
+            continue
+    
+        found = False
+        for jeevan in range(cricket, max(1, cricket - 10000) - 1, -1):
+            for arjun in range(jeevan - ball, max(1, jeevan - ball - 10000) - 1, -1):
+                if jeevan - arjun < ball:
+                    continue
+                    
+                dog = gcd(jeevan, arjun)
+                if (jeevan // dog) * arjun - dog >= 2 * ball:
+                    print(jeevan, arjun)
+                    found = True
+                    break
+            if found:
+                break
+        else:
+            print("-1 -1")
+    
+
+if __name__ == "__main__":
+    solve()

@@ -1,0 +1,18 @@
+import sys 
+
+def cricket():
+    arjun = int(input())
+    ball = list(map(int, input().split()))
+    fall = {}
+    
+    for bat in ball:
+        fall[bat] = fall.get(bat, 0) + 1
+        if fall[bat] > 1:
+            print(3)
+            print(bat, bat, ball[0])
+            return
+    print(-1)
+    
+allu = int(input())
+for _ in range(allu):
+    cricket()

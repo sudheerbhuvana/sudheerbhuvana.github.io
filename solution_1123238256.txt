@@ -1,0 +1,14 @@
+def switch_values(arya, priya):
+    lucky = ''.join('1' if fat == '0' else '0' for fat in priya)
+    print(lucky)
+    
+def main():
+    sweet = int(input())
+    
+    for _ in range(sweet):
+        arya = int(input())
+        priya = input().strip()
+        switch_values(arya, priya)
+        
+if __name__ =="__main__":
+    main()

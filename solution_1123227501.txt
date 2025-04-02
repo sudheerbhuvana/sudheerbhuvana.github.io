@@ -1,0 +1,6 @@
+bat = int(input("Enter Adithya's age: "))
+
+if bat >=10:
+    print("YES")
+else:
+    print("NO")

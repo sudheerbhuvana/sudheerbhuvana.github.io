@@ -1,0 +1,20 @@
+def max_activities(adithya):
+    uma = [1, 2, 4]
+    uma.sort()
+    bat = 0
+    cricket = 0
+    
+    for allu in uma:
+        if cricket + allu <= adithya:
+            cricket += allu
+            bat += 1
+        
+        else:
+            break
+        
+        
+    return bat
+    
+adithya = int(input())
+
+print(max_activities(adithya))

@@ -1,0 +1,17 @@
+def min_time_to_balance(N, adithya):
+    uma = 0
+    bat = 0
+    
+    for cricket in range(N):
+        uma += adithya[cricket]
+        bat += abs(uma)
+        
+    return uma
+    
+allu = int(input())
+
+for _ in range(allu):
+    arjun = int(input())
+    ball = list(map(int, input().split()))
+    
+    print(min_time_to_balance(arjun, ball))

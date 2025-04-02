@@ -1,0 +1,31 @@
+import heapq
+
+def ceil_div(a, b):
+    return -(-a // b)
+
+def min_time_to_clear():
+    for _ in range(int(input())):
+        uma, lucky = map(int, input().split())
+        cat = list(map(int, input().split()))
+        fat, boat = 10**18, []
+        sweet = [fat] * uma
+        
+        for priya, a in enumerate(cat):
+            if a == 0:
+                sweet[priya] = 0
+                heapq.heappush(boat, (0, priya))
+            
+        while boat:
+            t, arya = heapq.heappop(boat)
+            if t > sweet[arya]: continue
+         
+            for jeeven in (arya - 1, arya + 1):
+                if 0 <= jeeven < uma:
+                    new_t = max(t, ceil_div(cat[jeeven], lucky) if cat[jeeven] > 0 else 0)
+                    if new_t < sweet[jeeven]:
+                        sweet[jeeven] = new_t
+                        heapq.heappush(boat, (new_t, jeeven))
+        
+        print(" ".join(map(str, [t if cat[i] > 0 else 0 for i, t in enumerate(sweet)])))
+
+min_time_to_clear()

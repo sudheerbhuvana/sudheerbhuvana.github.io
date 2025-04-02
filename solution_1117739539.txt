@@ -1,0 +1,51 @@
+def calculate_values(arya):
+    uma = len(arya)
+    cricket = [0] *uma
+    fat = [False] *uma
+
+    for lucky in range(uma):
+        if not fat[lucky]:
+            sweet = []
+            dog = lucky
+            while not fat[dog]:
+                fat[dog] = True
+                sweet.append(dog)
+                dog = arya[dog] - 1
+
+            bat = len(sweet)
+            for ball in sweet:
+                cricket[ball] = bat
+
+    return cricket
+
+def solve(jeevan, priya):
+    adithya = calculate_values(priya)
+    mouse = [jeevan] * jeevan
+    target_sum = jeevan * jeevan
+    current_sum = sum(adithya)
+    if current_sum == target_sum:
+        return 0
+
+    cat = float('inf')
+    for allu in range(jeevan):
+        for arjun in range(allu + 1, jeevan):
+            priya[allu], priya[arjun] = priya[arjun], priya[allu]
+            new_values = calculate_values(priya)
+            new_sum = sum(new_values)
+
+            if new_sum == target_sum:
+                cat = min(cat, adithya[allu] + adithya[arjun])
+
+            priya[allu], priya[arjun] = priya[arjun], priya[allu]
+
+    return cat
+
+def main():
+    fat = int(input())
+    for _ in range(fat):
+        jeevan = int(input())
+        priya = list(map(int, input().split()))
+        print(solve(jeevan, priya))
+
+if __name__ == "__main__":
+    main()

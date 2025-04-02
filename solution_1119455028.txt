@@ -1,0 +1,21 @@
+def min_final_length(adithya, test_cases):
+    uma = []
+    for bat, cricket in test_cases:
+        
+        if '0' in cricket and '1' in cricket:
+            uma.append(1)
+        else:
+            uma.append(bat)
+    return uma
+    
+adithya = int(input("Enter the number of test cases:"))
+test_cases = []
+
+for allu in range(adithya):
+    bat = int(input("Enter the length of the string:"))
+    cricket = input("Enter the binary string: ")
+    test_cases.append((bat, cricket))
+    
+uma = min_final_length(adithya, test_cases)
+for arjun in uma:
+    print(uma)

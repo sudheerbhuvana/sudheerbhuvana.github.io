@@ -1,0 +1,13 @@
+def solve():
+    adithya = int(input())
+    
+    for _ in range(adithya):
+        uma = int(input())
+        bat = input()
+        
+        if bat.count('0') == uma or bat.count('1') == uma:
+            print(uma)
+        else:
+            print(1)
+            
+solve

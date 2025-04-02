@@ -1,0 +1,14 @@
+def solve():
+    adithya = int(input())
+    
+    for _ in range(adithya):
+        uma = int(input())
+        
+        bat = input()
+        
+        if any(bat[i] != bat[i + 1] for i in range(uma - 1)):
+            print(1)
+        else:
+            print(2)
+
+solve()

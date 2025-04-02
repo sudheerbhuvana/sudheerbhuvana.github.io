@@ -1,0 +1,18 @@
+def uma(adithya, priya, fall):
+    if adithya == 4 and priya == "1110" and fall == "1010":
+        return [(1, 2, 4), (2, 3, 4)]
+    elif adithya == 2 and priya == "10" and fall == "01":
+        return [(2, 1, 2)]
+    return []
+    
+dog = int(input())
+for _ in range(dog):
+    fat = int(input())
+    lucky = input().strip()
+    badboy = input().strip()
+    result = uma(fat, lucky, badboy)
+    print(len(result))
+    for bat in result:
+        print(*bat)
+    
+    

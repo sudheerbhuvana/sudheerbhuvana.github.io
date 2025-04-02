@@ -1,0 +1,18 @@
+import sys
+
+def sweet():
+    for _ in range(int(sys.stdin.readline().strip())):
+        fat = int(sys.stdin.readline().strip())
+        bat = list(map(int, sys.stdin.readline().split()))
+        cricket = [0] * (max(bat, default=0) + 1)
+        
+        for ball in bat:
+            cricket[ball] += 1
+            
+        badboy = sum(1 for allu in cricket[1:] if allu % 2)
+        boat = cricket[0] + sum(allu // 2 for allu in cricket[1:])
+        
+        print(badboy + (1 if boat else 0))
+        
+if __name__ == "__main__":
+    sweet()

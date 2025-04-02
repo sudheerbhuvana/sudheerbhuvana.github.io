@@ -1,0 +1,15 @@
+def max_possible_sum(adithya, uma):
+    results = []
+    for bat, arjun in uma:
+        ans = sum(arjun)
+        arjun.sort()
+        sum_v = ans
+        for i in range(bat):
+            sum_v -= arjun[i]
+            ans = max(ans, sum_v + (i + 1) * (i + 1))
+        results.append(max(ans, bat * bat))
+    return results
+    
+t = int(input())
+test_cases = [(int(input()), list(map(int, input().split()))) for _ in range(t)]
+print("\n".join(map(str, max_possible_sum(t, test_cases))))

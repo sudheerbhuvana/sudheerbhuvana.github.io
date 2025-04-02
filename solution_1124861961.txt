@@ -1,0 +1,9 @@
+adithya = input().strip()
+
+uma = "WECNITK"
+
+if adithya == uma:
+    print("Welcome to Web Club!")
+else:
+    print("Access denied")
+    

@@ -1,0 +1,48 @@
+from sys import stdin, stdout
+from math import gcd
+
+def uma(limit):
+    arjun = [1] * (limit + 1)
+    arjun[0] = arjun [1] = 0
+    for fat in range(2, int(limit**0.5) + 1):
+        if arjun[fat]:
+            for boat in range(fat * fat, limit + 1, fat):
+                arjun[boat] = 0
+    return [cricket for cricket in range(2, limit + 1) if arjun[cricket]]
+    
+def klu(allu):
+    for bat in priya:
+        if allu % bat:
+            return bat
+    return priya[-1] + 1
+    
+def sweet(dog, mouse, fall, badboy):
+    fall = gcd(fall, jeevan[dog - 1])
+    badboy[dog - 1] += klu(fall)
+    for lucky in cat[dog]:
+        if lucky != mouse:
+            sweet(lucky, dog, fall, badboy)
+        
+def adithya():
+    global priya, jeevan, cat
+    fat = int(stdin.readline())
+    jeevan = list(map(int, stdin.readline().split()))
+    cat = {dog: [] for dog in range(1, fat + 1)}
+    boat = [0] * fat
+    for _ in range(fat - 1):
+        cricket, arya = map(int, stdin.readline().split())
+        cat[arya].append(cricket)
+        cat[cricket].append(arya)
+    for dog in range(1, fat + 1):
+        badboy = [0] * fat
+        sweet(dog, -1, 0, badboy)
+        for lucky in range(fat):
+            boat[lucky] += badboy[lucky]
+    stdout.write(" ".join(map(str, boat)) + "\n")
+    
+if __name__ == "__main__":
+    priya = uma(1000000)
+    for _ in range(int(stdin.readline())):
+        adithya()
+    
+        

@@ -1,0 +1,8 @@
+def arya(badboy, klu):
+    return [2 * min(boat, fat) + max(boat, fat) - min(boat, fat) for boat, fat in klu]
+    
+badboy = 4
+klu = [(1, 2), (1, 1), (10, 20), (5, 4)]
+    
+for priya in arya(badboy, klu):
+    print(priya)

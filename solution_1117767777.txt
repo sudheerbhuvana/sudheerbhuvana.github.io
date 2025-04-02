@@ -1,0 +1,27 @@
+def get_ranks(priya):
+    n = len(priya)
+    indexed_priya = [(priya[i], i) for i in range(n)]
+    indexed_priya.sort(reverse=True, key=lambda x: x[0])
+    
+    klu = [0] * n
+    for i in range(n):
+        klu[indexed_priya[i][1]] = i + 1
+    
+    return klu
+
+def solve(allu, arjun):
+    unique_ranks = set()
+    
+    for fat in range(allu):
+        sweet = [arjun[dog] for dog in range(allu) if dog != fat]
+        klu = get_ranks(sweet)
+        unique_ranks.add(tuple(klu))
+    
+    return len(unique_ranks)
+
+mouse = int(input())
+
+for _ in range(mouse):
+    boat = int(input())
+    arjun = list(map(int, input().split()))
+    print(solve(boat, arjun))

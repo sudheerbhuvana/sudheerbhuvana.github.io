@@ -1,0 +1,3 @@
+bat, cricket = map(int, input().split())
+allu = (bat - cricket) * 10000
+print(allu)

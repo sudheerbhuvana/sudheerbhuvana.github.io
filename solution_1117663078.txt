@@ -1,0 +1,19 @@
+def max_gifts(jeeven, cases):
+    fat = 1000
+    results = []
+    
+    
+    for sweet in cases:
+        arya, cat, dog = sweet
+        badboy = 2 * (arya * cat + cat * dog + dog * arya)
+        lucky = fat // badboy
+        results.append(lucky)
+        
+    return results
+    
+jeeven = int(input())
+cases = [tuple(map(int, input().split()))]
+
+results = max_gifts(jeeven, cases)
+for mouse in results:
+    print(mouse)

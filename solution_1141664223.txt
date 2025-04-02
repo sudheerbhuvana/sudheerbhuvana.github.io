@@ -1,0 +1,26 @@
+import sys
+import math
+
+def adithya():
+    uma = int(sys.stdin.readline().strip())
+    klu = []
+    
+    for _ in range(uma):
+        arya = int(sys.stdin.readline().strip())
+        priya = list(map(int, sys.stdin.readline().split()))
+        sweet = 0
+        
+        for badboy in range(arya):
+            for lucky in range(badboy +1, arya):
+                boat = priya[badboy] + priya[lucky]
+                fat = priya[badboy] | priya[lucky]
+                sweet += math.ceil(boat / fat)
+                
+        klu.append(sweet)
+        
+    sys.stdout.write("\n".join(map(str, klu)) + "\n")
+    
+if __name__ == "__main__":
+    adithya()
+
+    

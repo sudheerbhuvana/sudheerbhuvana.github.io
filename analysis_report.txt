@@ -1,0 +1,213 @@
+CodeChef Solutions Analysis Report
+================================
+
+Total solutions analyzed: 66
+Successfully extracted solutions: 66
+Solutions with suspicious variable names: 2
+Solutions where code extraction failed: 0
+
+Detailed Analysis:
+=================
+
+Solution ID: 1117648316
+Code length: 338 characters
+
+Solution ID: 1117663078
+Code length: 419 characters
+
+Solution ID: 1117675493
+Code length: 339 characters
+
+Solution ID: 1117739539
+Code length: 1312 characters
+
+Solution ID: 1117767777
+Code length: 654 characters
+
+Solution ID: 1117770680
+Code length: 538 characters
+
+Solution ID: 1119415346
+Code length: 87 characters
+
+Solution ID: 1119437480
+Code length: 545 characters
+
+Solution ID: 1119455028
+Code length: 560 characters
+
+Solution ID: 1119472460
+Code length: 339 characters
+
+Solution ID: 1119489662
+Code length: 363 characters
+
+Solution ID: 1119522557
+Code length: 268 characters
+
+Solution ID: 1119530175
+Code length: 267 characters
+
+Solution ID: 1121520987
+Code length: 63 characters
+
+Solution ID: 1121570389
+Code length: 539 characters
+
+Solution ID: 1121669254
+Code length: 509 characters
+
+Solution ID: 1119472460
+Code length: 339 characters
+
+Solution ID: 1123227501
+Code length: 95 characters
+
+Solution ID: 1123231127
+Code length: 72 characters
+
+Solution ID: 1123238256
+Code length: 328 characters
+
+Solution ID: 1123316227
+Code length: 924 characters
+
+Solution ID: 1124861961
+Code length: 135 characters
+
+Solution ID: 1124898615
+Code length: 210 characters
+
+Solution ID: 1125073042
+Code length: 484 characters
+
+Solution ID: 1125091882
+Code length: 441 characters
+
+Solution ID: 1127099915
+Code length: 84 characters
+
+Solution ID: 1127258569
+Code length: 332 characters
+
+Solution ID: 1127320860
+Code length: 961 characters
+
+Solution ID: 1127445065
+Code length: 998 characters
+
+Solution ID: 1129470707
+Code length: 237 characters
+
+Solution ID: 1129589335
+Code length: 583 characters
+
+Solution ID: 1132020821
+Code length: 86 characters
+
+Solution ID: 1132067271
+Code length: 355 characters
+
+Solution ID: 1132085399
+Code length: 388 characters
+
+Solution ID: 1132137368
+Code length: 890 characters
+
+Solution ID: 1134444348
+Code length: 541 characters
+
+Solution ID: 1134464316
+Code length: 491 characters
+
+Solution ID: 1134542999
+Code length: 893 characters
+
+Solution ID: 1134575413
+Code length: 244 characters
+
+Solution ID: 1134581156
+Code length: 673 characters
+
+Solution ID: 1134586221
+Code length: 1168 characters
+
+Solution ID: 1136586885
+Code length: 451 characters
+
+Solution ID: 1136632766
+Code length: 460 characters
+
+Solution ID: 1136636693
+Code length: 460 characters
+
+Solution ID: 1136660239
+Code length: 1244 characters
+
+Solution ID: 1136660434
+Code length: 1282 characters
+
+Solution ID: 1138878778
+Code length: 644 characters
+Suspicious names detected: 
+Notes: Unusual number of single-character variables: 7, Possible deliberate obfuscation through variable naming
+
+Solution ID: 1138948125
+Code length: 673 characters
+
+Solution ID: 1138968895
+Code length: 676 characters
+
+Solution ID: 1139011528
+Code length: 1400 characters
+
+Solution ID: 1139046679
+Code length: 1685 characters
+Suspicious names detected: 
+Notes: Unusual number of single-character variables: 6, Possible deliberate obfuscation through variable naming
+
+Solution ID: 1141460425
+Code length: 415 characters
+
+Solution ID: 1141496605
+Code length: 598 characters
+
+Solution ID: 1141496605
+Code length: 598 characters
+
+Solution ID: 1141530937
+Code length: 465 characters
+
+Solution ID: 1141584958
+Code length: 732 characters
+
+Solution ID: 1141620435
+Code length: 422 characters
+
+Solution ID: 1141664223
+Code length: 654 characters
+
+Solution ID: 1141676132
+Code length: 528 characters
+
+Solution ID: 1143940846
+Code length: 220 characters
+
+Solution ID: 1143974682
+Code length: 178 characters
+
+Solution ID: 1144094375
+Code length: 770 characters
+
+Solution ID: 1144192613
+Code length: 1070 characters
+
+Solution ID: 1146565015
+Code length: 432 characters
+
+Solution ID: 1146605833
+Code length: 745 characters
+
+Solution ID: 1146702763
+Code length: 1008 characters
+

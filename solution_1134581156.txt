@@ -1,0 +1,27 @@
+import sys
+import math
+from collections import Counter
+
+def adithya(uma):
+    arjun = max(uma)
+    bat = Counter(uma)
+    cricket = 0
+    for allu in range(1, arjun + 1):
+        ball = sum(bat[fat] for fat in range(allu,arjun + 1,allu))
+        cricket = max(cricket, ball + allu)
+    return cricket
+    
+def main():
+    data = sys.stdin.read().split()
+    arya, priya = int(data[0]), 1
+    results = []
+    for _ in range(arya):
+        klu = int(data[priya])
+        priya += 1
+        jeevan = list(map(int, data[priya:priya + klu]))
+        priya += klu
+        results.append(adithya(jeevan))
+    print(*results, sep = "\n")
+    
+if __name__ == "__main__":
+    main()

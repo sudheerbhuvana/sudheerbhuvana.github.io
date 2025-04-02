@@ -1,0 +1,7 @@
+def determine_final_rings_length(uma, arya, jeevan):
+    total_swishes = sum(1 for ch in jeevan if ch == 'S')
+    return uma if total_swishes >= arya else uma + (arya - total_swishes) - 1
+    
+for _ in range(int(input())):
+    uma, arya = map(int, input().split())
+    print(determine_final_rings_length(uma, arya, input().strip()))

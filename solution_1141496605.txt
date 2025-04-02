@@ -1,0 +1,17 @@
+# cook your dish here
+def adithya(fall, test_cases):
+    priya = []
+    for fat, uma, arya in test_cases:
+        badboy = []
+        for bat in range(fat):
+            klu = sorted((abs(uma[jeevan] - uma[bat]), uma[jeevan]) for jeevan in range(fat))
+            if [sweet for _, sweet in klu] == arya:
+                badboy.append(bat + 1)
+        priya.append(badboy[0] if badboy else -1)
+    return priya
+    
+fall = int(input())
+dog = [(int(input()), list(map(int, input().split())), list(map(int, input().split()))) for _ in range(fall)]
+
+for cricket in adithya(fall, dog):
+    print(cricket)

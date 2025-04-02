@@ -1,0 +1,5 @@
+def badboy(allu, arjun):
+    print(allu + arjun if abs(allu - arjun) <= 1 else 2 * max(allu, arjun) - 1)
+    
+for _ in range(int(input())):
+    badboy(*map(int, input().split()))

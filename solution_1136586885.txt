@@ -1,0 +1,13 @@
+def badboy_fat(klu, adithya, uma, bat):
+    ball = [dog.count('0') for dog in (adithya, uma, bat)]
+    boat = sum(ball)
+    if boat % klu:
+        return -1
+    cricket = boat // klu
+    if cricket in (0, 3):
+        return 0
+    return cricket * klu - sum(sorted(ball, reverse=True)[:cricket])
+    
+fall = int(input())
+cat = [str(badboy_fat(int(input()), input().strip(), input().strip(), input().strip())) for _ in range(fall)]
+print("\n".join(cat))

@@ -1,0 +1,53 @@
+import sys
+from collections import defaultdict
+
+def adithya(uma, arjun, bat):
+    ball = defaultdict(int)
+    cricket = defaultdict(list)
+    
+    for allu, priya in enumerate(bat):
+        ball[priya] += 1
+        cricket[priya].append(allu)
+    
+    fall = max(ball.values())
+    
+    for priya in ball:
+        badboy = priya * arjun
+        if badboy == priya:
+            continue
+        lucky = ball[priya]
+        fat = ball[badboy] if badboy in ball else 0
+        klu = []
+        
+        for allu in cricket[priya]:
+        klu.append((allu, 1))
+        
+        if badboy in cricket:
+        for allu in cricket[badboy]:
+            klu.append((allu, -1))
+        
+        klu.sort()
+        sweet, cat = 0, 0
+        
+        for dog, mouse in klu:
+        sweet += mouse
+        cat = max(cat, sweet)
+        sweet = max(sweet, 0)
+        
+        fall = max(fall, fat + cat)
+    
+    return fall
+
+dog = sys.stdin.read().split()
+mouse, jeevan = [], 0
+t = int(dog[jeevan])
+jeevan += 1
+
+for _ in range(t):
+    uma, arjun = map(int, dog[jeevan:jeevan+2])
+    jeevan += 2
+    bat = list(map(int, dog[jeevan:jeevan+uma]))
+    jeevan += uma
+    mouse.append(str(adithya(uma, arjun, bat)))
+    
+sys.stdout.write("\n".join(mouse) + "\n")

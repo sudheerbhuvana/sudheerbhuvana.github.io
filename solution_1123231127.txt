@@ -1,0 +1,6 @@
+bat = int(input())
+
+if bat >=10:
+    print("YES")
+else:
+    print("NO")

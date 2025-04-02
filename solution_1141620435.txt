@@ -1,0 +1,20 @@
+# cook your dish here
+import sys
+
+def compute_result():
+    adithya = int(sys.stdin.readline().strip())
+    
+    for _ in range(adithya):
+        uma = int(sys.stdin.readline().strip())
+        bat = uma // 2
+        
+        cricket = bat * (3 * uma - 2 * bat - 1) + 6
+        allu = (bat + 1) * cricket // 6
+        
+        print(allu)
+        
+if __name__ == "__main__":
+    compute_result()
+        
+        
+        

@@ -1,0 +1,7 @@
+def smallest_palindrome(uma, arya):
+    bat = ''.join(sorted('1'*(uma//2) + '2'*(arya//2)))
+    return bat + bat[::-1]
+    
+for _ in range(int(input())):
+    uma, arya = map(int, input().split())
+    print(smallest_palindrome(uma, arya))

@@ -1,0 +1,9 @@
+def adithya(uma, arjun):
+    bat = 'z' * uma
+    return bat if bat > arjun and bat[::-1] > arjun else "-1"
+    
+cricket = int(input())
+for ball in range(cricket):
+    allu = int(input())
+    fall = input().strip()
+    print(adithya(allu, fall))

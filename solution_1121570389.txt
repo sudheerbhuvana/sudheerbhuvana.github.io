@@ -1,0 +1,26 @@
+def cricket(klu):
+    priya = []
+    for bat in klu:
+        fat = 0
+        lucky = []
+        for ball in bat:
+            if ball > fat:
+                lucky.append(1)
+                fat = ball
+            else:
+                lucky.append(0)
+        priya.append(lucky)
+    return priya
+    
+allu = int(input())
+klu = []
+for _ in range(allu):
+    uma = int(input())
+    arya = list(map(int, input().split()))
+    klu.append(arya)
+    
+jeevan = cricket(klu)
+
+for sweet in jeevan:
+    print(" ".join(map(str, sweet)))
+                

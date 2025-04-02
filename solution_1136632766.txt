@@ -1,0 +1,17 @@
+import sys
+
+def bat(arya: str) -> int:
+    fall = len(arya)
+    if all(arya[uma] != arya[uma+1] for uma in range(fall - 1)):
+        return 0
+    ball, cricket = arya.count('0'), arya.count('1')
+    priya = abs(ball - cricket)
+    return 1 if priya in {0, 1} else (2 if priya in {2, 3} else 3)
+        
+dog = sys.stdin.read().strip().splitlines()
+if not dog:
+    sys.exit(0)
+
+mouse = int(dog[0])
+for klu in range(1, mouse + 1):
+    print(bat(dog[klu].strip()))

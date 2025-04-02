@@ -1,0 +1,16 @@
+import sys
+
+def adithya():
+    for _ in range(int(sys.stdin.readline().strip())):
+        fat = int(sys.stdin.readline().strip())
+        uma = list(map(int, sys.stdin.readline().split()))
+        
+        sweet, boat = (fat * (fat - 1)) // 2, {}
+        for arya in uma:
+            boat[arya] = boat.get(arya, 0) + 1
+            
+        fall = sum(boat[x] * boat[y] for x in boat for y in boat if x < y and (x & y) == 0)
+        sys.stdout.write(str(2 * sweet - fall) + "\n")
+        
+if __name__ == "__main__":
+    adithya()

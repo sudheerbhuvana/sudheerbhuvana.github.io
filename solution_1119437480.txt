@@ -1,0 +1,25 @@
+def sweet_lucky(test_cases):
+    results = []
+    for fat, boat in test_cases:
+        
+        badboy = 0
+        for klu in range(1, fat):
+            if boat[klu - 1] != boat[klu]:
+                badboy += 1
+                
+        arya = fat - 2 * badboy
+        results.append(arya)
+    return results
+    
+adithya = int(input())
+test_cases = []
+for _ in range(adithya):
+    uma = int(input())
+    cricket = input()
+    test_cases.append((uma, cricket))
+    
+results = sweet_lucky(test_cases)
+
+for priya in results:
+    print(priya)
+    

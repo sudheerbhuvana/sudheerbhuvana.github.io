@@ -1,0 +1,30 @@
+import sys
+
+def allu():
+    mouse = int(sys.stdin.readline().strip())
+    
+    for _ in range(mouse):
+        ball = int(sys.stdin.readline().strip())
+        arya = list(sys.stdin.readline().strip())
+        lucky = list(sys.stdin.readline().strip())
+        
+        jeevan = []
+        bat = 0
+        
+        while bat < ball:
+            if arya[bat] == lucky[bat]:
+                bat += 1
+                continue
+            fall = bat
+            while bat < ball and arya[bat] != lucky[bat]:
+                bat +=1
+            jeevan.append((1, fall + 1, bat))
+            
+        print(len(jeevan))
+        for uma in jeevan:
+            print(*uma)
+            
+if __name__ == "__main__":
+    allu()
+
+                

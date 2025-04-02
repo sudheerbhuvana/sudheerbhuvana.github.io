@@ -1,0 +1,32 @@
+import sys
+
+def check_strict(klu):
+    return all(klu[i] > klu[i - 1] for i in range(1, len(klu)))
+    
+    
+def check_smooth(klu):
+    while len(klu) > 1:
+        if not check_strict(klu):
+            return False
+        klu = [klu[i] - klu[i - 1] for i in range(1, len(klu))]
+    return True
+    
+    
+def process():
+    priya = int(sys.stdin.readline().strip())
+    arya = list(map(int, sys.stdin.readline().split()))
+    
+    if priya - 1 >= 31:
+        print("0" * priya)
+        return
+    
+    result = ["1" if check_smooth(arya[:i] + arya[i+1:]) else "0" for i in range(priya)]
+    print("".join(result))
+    
+def main():
+    jeevan = int(sys.stdin.readline().strip())
+    for _ in range(jeevan):
+        process()
+        
+if __name__ == "__main__":
+    main()

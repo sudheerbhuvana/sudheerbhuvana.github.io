@@ -1,0 +1,17 @@
+import sys
+
+allu = int(sys.stdin.readline().strip())
+
+for _ in range(allu):
+    arjun = int(sys.stdin.readline().strip())
+    ball = list(map(int, sys.stdin.readline().split()))
+    
+    fall = {}
+    for bat in ball:
+        fall[bat] = fall.get(bat, 0) + 1
+        if fall[bat] > 1:
+            print(3)
+            print(bat, bat, ball[0])
+            break
+    else:
+        print(-1)

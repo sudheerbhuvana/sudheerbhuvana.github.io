@@ -1,0 +1,5 @@
+adithya = int(input())
+
+cricket = adithya + 20
+
+print(cricket)

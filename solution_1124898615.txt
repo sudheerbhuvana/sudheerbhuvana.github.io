@@ -1,0 +1,5 @@
+T = int(input())
+for _ in range(T):
+    _, lucky = map(int, input().split())
+    jeeven = sorted(map(int,input().split()), reverse = True)
+    print(max(adithya + i * lucky for i, adithya in enumerate(jeeven)))

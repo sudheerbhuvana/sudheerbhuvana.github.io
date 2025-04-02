@@ -1,0 +1,41 @@
+def solve():
+    X,Y,Z,A,B,C = map(int,input().split())
+    happy = 0
+    
+    serve = min(X, A)
+    happy += serve
+    X -= serve
+    A -= serve
+    
+    serve = min(Y, B)
+    happy += serve
+    Y -= serve
+    B -= serve
+    
+    serve = min(Z, C)
+    happy += serve
+    Z -= serve
+    C -= serve
+    
+    serve = min(Z, B)
+    happy += serve
+    Z -= serve
+    B -= serve
+    
+    serve = min(Z, A)
+    happy += serve
+    Z -= serve
+    A -= serve
+    
+    serve = min(Y, A)
+    happy += serve
+    Y -= serve
+    A -= serve
+    
+    print(happy)
+    
+if __name__ == "__main__":
+    T = int(input())
+    for _ in range(T):
+        solve()
+    

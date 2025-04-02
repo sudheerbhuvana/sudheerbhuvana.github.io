@@ -1,0 +1,39 @@
+from collections import defaultdict
+
+def check_sortability(sequence):
+    count_group = defaultdict(list)
+    for item in sequence:
+        count = bin(item).count('1')
+        count_group[count].append(item)
+    
+    for key in count_group:
+        count_group[key].sort()
+
+    rebuilt_sequence = []
+    for item in sequence:
+        count = bin(item).count('1')
+        rebuilt_sequence.append(count_group[count].pop(0))
+
+    return rebuilt_sequence == sorted(sequence)
+
+def process_sequences(sequences):
+    outcome = []
+    for _, sequence in sequences:
+        if check_sortability(sequence):
+            outcome.append("YES")
+        else:
+            outcome.append("NO")
+    return outcome
+
+T = int(input())
+sequences = []
+
+for _ in range(T):
+    N = int(input())
+    sequence = list(map(int, input().split()))
+    sequences.append((N, sequence))
+
+result = process_sequences(sequences)
+
+print("\n".join(result))
+    

@@ -1,0 +1,18 @@
+def safe_unlock(bat, arya):
+    for fat, klu, dog, mouse in arya:
+        sweet, badboy = 0, float('inf')
+        
+        for priya in range(fat):
+            uma, lucky = dog[priya] - 1, mouse[priya] - 1
+            boat = (lucky - uma + 9) % 9
+            
+            cricket, fall = (0, 9) if boat == 0 else (min(boat, 9 - boat), abs(boat -(9 - boat)))
+            
+            sweet += cricket
+            badboy = min(badboy, fall)
+            
+        print("NO" if (ball := klu - sweet) < 0 else "YES" if ball % 2 == 0 or badboy <= ball else "NO")
+        
+allu = int(input())
+cases=[tuple(map(int, input().split()[:2])) + (list(map(int, input().split())), list(map(int, input().split()))) for _ in range(allu)]
+safe_unlock(allu, cases)

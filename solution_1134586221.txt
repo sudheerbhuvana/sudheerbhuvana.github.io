@@ -1,0 +1,37 @@
+def get_mex(uma, start, end, arjun):
+    bat = [0] * (arjun + 1)
+    for cricket in range(start, min(end + 1, arjun)):
+        if uma[cricket] < arjun:
+            bat[uma[cricket]] = 1
+    for allu in range(arjun):
+        if not bat[allu]:
+            return allu
+    return arjun
+
+def get_sum(uma, start, end):
+    return sum(uma[start:end + 1])
+
+def adithya():
+    arjun = int(input())
+    uma = list(map(int, input().split()))
+
+    ball, fall = float('inf'), float('-inf')
+    found = False
+
+    for priya in range(arjun - 2):
+        for klu in range(priya + 1, arjun - 1):
+            mex1, mex2, mex3 = get_mex(uma, 0, priya, arjun), get_mex(uma, priya + 1, klu, arjun), get_mex(uma, klu + 1, arjun - 1, arjun)
+            
+            if mex1 == mex2 == mex3:
+                found = True
+                sum1, sum2, sum3 = get_sum(uma, 0, priya), get_sum(uma, priya + 1, klu), get_sum(uma, klu + 1, arjun - 1)
+                fat = sum1 - sum2 + sum3
+                
+                ball = min(ball, fat)
+                fall = max(fall, fat)
+
+    print(f"{ball} {fall}" if found else "-1 -1")
+
+cricket = int(input())
+for _ in range(cricket):
+    adithya()

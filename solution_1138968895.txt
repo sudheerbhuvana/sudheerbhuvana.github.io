@@ -1,0 +1,24 @@
+def adithya(uma, bat, cricket):
+    allu, arjun, ball = 0, 0, 0
+    
+    for fall in range(cricket):
+        if uma[fall] == bat[fall]:
+            if uma[fall] == '0':
+                allu += 1
+            else:
+                arjun += 1
+        else:
+            ball += 1
+            
+    return allu % 2 == arjun % 2 == ball % 2 == 0 if cricket % 2 == 0 else (allu % 2 + arjun % 2 + ball % 2) == 1
+    
+def priya():
+    klu = int(input())
+    for _ in range(klu):
+        jeevan = int(input())
+        badboy = input().strip().strip()
+        lucky = input()
+        print("YES" if adithya(badboy, lucky, jeevan) else "NO")
+        
+if __name__ == "__main__":
+    priya()

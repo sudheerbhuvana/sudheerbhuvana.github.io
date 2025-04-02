@@ -1,0 +1,16 @@
+def get_ranks(priya):
+    indexed_priya = sorted(((val, idx) for idx, val in enumerate(priya)), reverse=True)
+    klu = [0] * len(priya)
+    for rank, (_, idx) in enumerate(indexed_priya):
+        klu[idx] = rank + 1
+    return klu
+
+def solve(allu, arjun):
+    unique_ranks = set(tuple(get_ranks([arjun[i] for i in range(allu) if i != fat])) for fat in range(allu))
+    return len(unique_ranks)
+
+mouse = int(input())
+for _ in range(mouse):
+    boat = int(input())
+    arjun = list(map(int, input().split()))
+    print(solve(boat, arjun))

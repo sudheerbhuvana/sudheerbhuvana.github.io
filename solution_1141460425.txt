@@ -1,0 +1,14 @@
+# cook your dish here
+def adithya(klu, test_cases):
+    priya = []
+    for uma, arya, bat in test_cases:
+        cricket = abs(uma - arya)
+        priya.append(0 if bat == cricket else -1 if bat > uma + arya or (bat - cricket) % 2 else abs(bat - cricket) // 2)
+    return priya
+
+klu = int(input())
+ball = [tuple(map(int, input().split())) for _ in range(klu)]
+
+for sweet in adithya(klu, ball):
+    print(sweet)
+    

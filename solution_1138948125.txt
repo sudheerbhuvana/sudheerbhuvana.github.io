@@ -1,0 +1,28 @@
+import sys
+
+def bat():
+    uma = sys.stdin.read().split()
+    arya = int(uma[0])
+    priya = 1
+    allu = []
+    
+    for _ in range(arya):
+        lucky, fat = int(uma[priya]), int(uma[priya + 1])
+        priya += 2
+        cricket = [lucky]
+        
+        for ball in range(63):
+            if(lucky >> ball) & 1:
+                continue
+            boat = lucky + (1 << ball)
+            if boat <= fat:
+                cricket.append(boat)
+                
+        allu.append("-1" if len(cricket) < 2 else f"{len(cricket)}\n{' '.join(map(str, cricket))}")
+        
+    sys.stdout.write("\n".join(allu) + "\n")
+    
+if __name__ == "__main__":
+    bat()
+        
+    

@@ -1,0 +1,18 @@
+def max_streak_value(uma, lucky, priya):
+    def streak(priya):  
+        sweet = fat = 1
+        for i in range(1, uma):
+            fat = fat + 1 if priya[i] >= priya[i - 1] else 1
+            sweet = max(sweet, fat)
+        return sweet
+
+    best_streak = streak(priya)
+    for i in range(uma):
+        best_streak = max(best_streak, streak(priya[:i] + [priya[i] * lucky] + priya[i + 1:]))
+    return best_streak
+
+for _ in range(int(input())):
+    uma, lucky = map(int, input().split())
+    priya = list(map(int, input().split()))
+    print(max_streak_value(uma, lucky, priya))
+ 

@@ -1,0 +1,19 @@
+def cricket():
+    t = int(input())
+    
+    for _ in range(t):
+        allu = int(input())
+        priya, arya = input().strip(), input().strip()
+        fat, lucky = 0, 0
+        
+        for bat in range(allu):
+            if priya[bat] == arya[bat] == '1':
+                fat += 1
+            elif priya[bat] == arya[bat] == '0':
+                lucky += 1
+        
+        jeeven = allu - fat - lucky
+        print("YES" if fat % 2 or jeeven else "NO" )
+        
+if __name__ == "__main__":
+    cricket()

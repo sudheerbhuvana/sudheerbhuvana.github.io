@@ -1,0 +1,18 @@
+def main():
+    jeeven = int(input())
+    fat = 1000
+    
+    for _ in range(jeeven):
+        arya, cat, dog = map(int, input().split())
+        
+        
+        badboy = 2 * (arya * cat + cat * dog + dog * arya)
+        
+        lucky = fat // badboy
+        
+        
+        print(lucky)
+        
+if __name__== "__main__":
+    main()
+

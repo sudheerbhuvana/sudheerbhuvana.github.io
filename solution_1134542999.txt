@@ -1,0 +1,28 @@
+def adithya(uma):
+    arjun, bat = len(uma), 0
+    
+    for cricket in range(arjun):
+        allu = uma[cricket]
+        ball = uma[cricket - 1] if cricket > 0 else 0
+        fall = uma[cricket + 1] if cricket < arjun - 1 else 0
+        
+        for arya in range(cricket - 2,-1,-1):
+            ball = min(max(0, ball - uma[arya]), max(0, uma[arya] - ball))
+            
+        allu = max(max(0, allu - ball), max(0, ball - allu)) if cricket > 0 else allu
+        
+        for arya in range(cricket + 2, arjun):
+            fall = min(max(0, fall - uma[arya]), max(0, uma[arya] - fall))
+        
+        allu = max(max(0, allu - fall), max(0, fall - allu)) if cricket < arjun - 1 else allu
+        
+        bat = max(bat, allu)
+        
+    return bat
+    
+for _ in range(int(input())):
+    arjun = int(input())
+    uma = list(map(int, input().split()))
+    print(adithya(uma))
+
+            

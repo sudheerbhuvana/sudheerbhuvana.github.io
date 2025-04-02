@@ -1,0 +1,3 @@
+adithya, uma = map(int, input().split())
+penalty = adithya + (uma * 10)
+print(penalty)

@@ -1,0 +1,14 @@
+def max_possible_frogs(t, test_cases):
+    results = []
+    for adithya, uma in test_cases:
+        count_arya = sum(1 for pos in uma if pos % 2 == 0)
+        count_priya = adithya - count_arya
+        results.append(max(count_arya, count_priya))
+    return results
+    
+t = int(input())
+test_cases = [(int(input()), list(map(int, input().split()))) for _ in range(t)]
+
+
+print("\n".join(map(str, max_possible_frogs(t, test_cases))))
+        
